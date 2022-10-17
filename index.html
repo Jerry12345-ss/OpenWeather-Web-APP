@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Openweather App</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/icon" href="./img/icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main>
+        <div class="hero">
+            <div class="container">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center" style="height: 5rem;">
+                        <h1>Weather App</h1>
+                        <div class="day-night-switch">
+                            <label class="toggle">
+                                <input type="checkbox" id="toggle" class="toggle-switch">
+                                <div class="sun-moon">
+                                    <div class="dots"></div>
+                                </div>
+                                <div class="switch-background">
+                                    <div class="star1"></div>
+                                    <div class="star2"></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content mb-4">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="weather-input">
+                            <input type="text" class="form-control" placeholder="請輸入城市或國家英文名稱">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-search weather-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="weather-current">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col text-center">
+                            <p>Developer By <a href="https://github.com/Jerry12345-ss">Jerry</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.37/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

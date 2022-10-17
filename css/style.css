@@ -1,0 +1,348 @@
+@charset "UTF-8";
+main {
+  width: 100%;
+  margin: auto 0px;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "Noto Sans TC", "Roboto", "Microsoft JhengHei", "微軟正黑體", sans-serif;
+  background-color: rgb(3, 14, 32);
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 960px;
+}
+
+main .card-header {
+  margin-bottom: 1rem;
+}
+main .card-header h1 {
+  font-weight: bold;
+  font-size: 2.2rem;
+  color: rgb(47, 93, 138);
+}
+main .card-header .day-night-switch {
+  position: relative;
+  width: 6rem;
+}
+main .card-header .day-night-switch label {
+  position: relative;
+  cursor: pointer;
+}
+main .card-header .day-night-switch label input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+}
+main .card-header .day-night-switch label input:checked ~ .sun-moon {
+  background-color: #F5EC59;
+  left: calc(100% - 2.5rem);
+  transform: rotate(-25deg);
+}
+main .card-header .day-night-switch label input:checked ~ .sun-moon .dots, main .card-header .day-night-switch label input:checked ~ .sun-moon .dots::before, main .card-header .day-night-switch label input:checked ~ .sun-moon .dots::after {
+  background-color: #FFFFFF;
+  border: #FFFFFF;
+}
+main .card-header .day-night-switch label input:checked ~ .sun-moon .dots {
+  height: 1rem;
+  width: 1rem;
+  top: 4px;
+  right: 25px;
+}
+main .card-header .day-night-switch label input:checked ~ .sun-moon .dots::before {
+  height: 0.8rem;
+  width: 0.8rem;
+  top: 8px;
+  right: -3px;
+}
+main .card-header .day-night-switch label input:checked ~ .sun-moon .dots::after {
+  height: 0.7rem;
+  width: 0.7rem;
+  top: 3px;
+  right: 10px;
+}
+main .card-header .day-night-switch label input:checked ~ .switch-background .star1, main .card-header .day-night-switch label input:checked ~ .switch-background .star2 {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+main .card-header .day-night-switch label input:checked ~ .switch-background {
+  background-color: rgb(105, 199, 254);
+}
+main .card-header .day-night-switch label .sun-moon {
+  position: absolute;
+  left: 0;
+  height: 2rem;
+  width: 2rem;
+  background-color: rgb(237, 252, 254);
+  border-radius: 50%;
+  z-index: 2;
+  margin: 0.3rem;
+  transition: all 0.4s ease;
+}
+main .card-header .day-night-switch label .sun-moon .dots {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  border-radius: 50%;
+  height: 0.8rem;
+  width: 0.8rem;
+  background-color: rgb(215, 237, 239);
+  transition: all 0.4s ease;
+}
+main .card-header .day-night-switch label .sun-moon .dots::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  background-color: rgb(215, 237, 239);
+  transition: all 0.4s ease;
+  top: 10px;
+  right: 1px;
+}
+main .card-header .day-night-switch label .sun-moon .dots::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  background-color: rgb(215, 237, 239);
+  transition: all 0.4s ease;
+  height: 0.3rem;
+  width: 0.3rem;
+  top: 15px;
+  right: 18px;
+}
+main .card-header .day-night-switch label .switch-background {
+  z-index: 1;
+  width: 5.5rem;
+  height: 2.5rem;
+  border-radius: 2.5rem;
+  background: rgb(17, 24, 80);
+  transition: all 0.3s;
+}
+main .card-header .day-night-switch label .switch-background .star1, main .card-header .day-night-switch label .switch-background .star2 {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 0.35rem;
+  width: 0.35rem;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+main .card-header .day-night-switch label .switch-background .star1 {
+  top: 6px;
+  right: 23px;
+}
+main .card-header .day-night-switch label .switch-background .star1::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 0.2rem;
+  width: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  top: 12px;
+  right: -15px;
+}
+main .card-header .day-night-switch label .switch-background .star1::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 0.2rem;
+  width: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  top: 5px;
+  right: 18px;
+}
+main .card-header .day-night-switch label .switch-background .star2 {
+  top: 28px;
+  right: 42px;
+}
+main .card-header .day-night-switch label .switch-background .star2::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 0.2rem;
+  width: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  top: 4px;
+  right: -28px;
+}
+main .card-header .day-night-switch label .switch-background .star2::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 0.2rem;
+  width: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  top: -7px;
+  right: -12px;
+}
+main .card-content {
+  color: rgb(74, 111, 161);
+}
+main .card-content .weather-input {
+  position: relative;
+}
+main .card-content .weather-input .weather-search {
+  position: absolute;
+  right: 2rem;
+  bottom: 1.1rem;
+  cursor: pointer;
+  color: rgb(74, 111, 161);
+}
+main .card-content .form-control {
+  border-radius: 26px;
+  height: 3.25rem;
+  padding: 10px 25px;
+  background-color: rgb(5, 30, 51);
+  color: rgb(105, 152, 213);
+  border: none;
+  font-size: 1.125rem;
+}
+main .card-content .form-control::placeholder {
+  color: rgb(86, 128, 183);
+  font-size: 1rem;
+}
+main .card-content input[type=text]:focus {
+  border-color: none;
+  box-shadow: none;
+  outline: 0 none;
+}
+main .card-content .weather-current {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem 2rem;
+  background-color: rgba(5, 30, 61, 0.75);
+  margin-top: 2rem;
+  display: none;
+}
+main .card-content .weather-current .current-title span {
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: rgb(33, 99, 151);
+}
+main .card-content .weather-current .current-title .temp-transform {
+  position: relative;
+  height: 1.5rem;
+}
+main .card-content .weather-current .current-title .temp-transform label {
+  position: relative;
+  cursor: pointer;
+}
+main .card-content .weather-current .current-title .temp-transform label input {
+  position: absolute;
+  opacity: 0;
+}
+main .card-content .weather-current .current-title .temp-transform label input:checked ~ .temp-unit {
+  left: 20%;
+}
+main .card-content .weather-current .current-title .temp-transform label input:checked ~ .temp-switch {
+  left: calc(100% - 1.5rem);
+}
+main .card-content .weather-current .current-title .temp-transform label .temp-unit {
+  position: absolute;
+  z-index: 1;
+  right: 20%;
+}
+main .card-content .weather-current .current-title .temp-transform label .temp-background {
+  z-index: 1;
+  width: 3.8rem;
+  height: 1.5rem;
+  border-radius: 2.5rem;
+  background: rgb(69, 124, 191);
+}
+main .card-content .weather-current .current-title .temp-transform label .temp-switch {
+  position: absolute;
+  background-color: rgb(139, 183, 221);
+  height: 1.25rem;
+  width: 1.25rem;
+  margin: 0.125rem;
+  border-radius: 50%;
+  left: 0;
+}
+main .card-content .weather-current .current-content .col-12 {
+  margin: 2rem 0.7rem;
+}
+main .card-content .weather-current .current-content .weather-temp .country-city h4 {
+  color: rgb(57, 107, 174);
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+main .card-content .weather-current .current-content .weather-temp .temperature {
+  font-size: 7rem;
+  color: rgb(74, 111, 161);
+  line-height: 1;
+  margin-left: 1.5rem;
+  font-weight: 200;
+}
+main .card-content .weather-current .current-content .weather-temp .weather span {
+  font-size: 2.2rem;
+  color: rgb(123, 152, 178);
+  font-weight: 600;
+}
+main .card-content .weather-current .current-content .weather-detail svg, main .card-content .weather-current .current-content .weather-detail .text {
+  color: rgb(138, 155, 172);
+}
+main .card-content .weather-current .current-content .weather-detail .result {
+  color: rgb(55, 128, 192);
+}
+main .card-content .weather-current .current-content .weather-detail .datetime {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: rgb(57, 107, 174);
+}
+main .card-content .weather-current .current-content .weather-detail .temp-mg {
+  margin-right: 1.2rem;
+}
+main .card-footer {
+  color: rgb(47, 111, 138);
+}
+main .card-footer a {
+  color: rgb(47, 111, 138);
+}
+
+body.bx-sun {
+  background-color: rgb(181, 235, 237);
+}
+
+main .card-content .form-control.bx-sun {
+  background-color: rgb(255, 255, 255);
+  color: rgb(114, 126, 142);
+}
+main .card-content .weather-current.bx-sun {
+  background-color: rgb(255, 255, 255);
+}
+main .card-content .weather-current.bx-sun .current-title span {
+  color: rgb(114, 126, 142);
+}
+
+@media (max-width: 768px) {
+  main .card-content .weather-current {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
